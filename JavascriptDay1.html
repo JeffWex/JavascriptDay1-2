@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <script>
+        function myClick(){
+            let op = document.getElementById("txt1").value;
+            let a = Number(document.getElementById("num1").value);
+            
+            if(op === 'multiply'){
+                let x = myFunction(a);
+                document.getElementById("demo").innerHTML = x;
+            
+            }
+            if(op === 'division' && a%10 == 0){
+                let x = myFunctionDivide(a);
+                document.getElementById("demo").innerHTML = x;
+                console.log(x)
+            
+            }
+            if(op === 'addition'){
+                let x = myFunctionAdd(a);
+                document.getElementById("demo").innerHTML = x;
+            }
+            if(op === 'subtraction'){
+                let x = myFunctionSub(a);
+                document.getElementById("demo").innerHTML = x;
+            }
+    
+            function myFunction(a){
+                return a * 3
+            }
+            function myFunctionAdd(a){
+                return a + 3
+            }
+            function myFunctionSub(a){
+                return a - 3
+            }
+            function myFunctionDivide(a){
+                return a / 10
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <p id="demo"></p>
+    <input type="number" id="num1" name="number1">
+    <input type="text" id="txt1" name="operation">
+    <input type="text" id="display" name="display" readonly="true">
+
+    <button id="btn" name="button1" onclick="myClick()">Submit</button>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <script>
+        function myClick(){
+            let ft = document.getElementById("txt1").value;
+            let lt = document.getElementById("txt2").value;
+            let result = "";
+            if(ft == lt){
+                result = document.write("First name is equal of the last name")
+            }
+            else{
+                result = document.write("First name is difference of the last name")
+            }
+            
+
+        }
+    </script>
+</head>
+<body>
+    <p id="demo"></p>
+    <input type="text" id="txt1" name="first">
+    <input type="text" id="txt2" name="last">
+
+
+    <button id="btn" name="button1" onclick="myClick()">Submit</button>
+
+</body>
+</html>
